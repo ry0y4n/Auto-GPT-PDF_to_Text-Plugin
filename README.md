@@ -73,6 +73,7 @@ You can also see the plugins here:
 | SceneX           | Explore image storytelling beyond pixels with the Auto-GPT SceneX Plugin.                                        | [autogpt_plugins/scenex](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/tree/master/src/autogpt_plugins/scenex)               |
 | Twitter          | Auto-GPT is capable of retrieving Twitter posts and other related content by accessing the Twitter platform via the v1.1 API using Tweepy.               | [autogpt_plugins/twitter](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/tree/master/src/autogpt_plugins/twitter)           |
 | Wikipedia Search | This allows Auto-GPT to use Wikipedia directly.                                                                    | [autogpt_plugins/wikipedia_search](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/tree/master/src/autogpt_plugins/wikipedia_search) |
+| PDF to Text | Convert a PDF file to a text file.                                                                    | [autogpt_plugins/pdf_to_txt](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/tree/master/src/autogpt_plugins/pdf_to_txt) |
 
 Some third-party plugins have been created by contributors that are not included in this repository. For more information about these plugins, please visit their respective GitHub pages.
 
