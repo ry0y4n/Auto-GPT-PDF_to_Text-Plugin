@@ -1,4 +1,4 @@
-"""Twitter API integrations using Tweepy."""
+"""This is the PDF to Text plugin for AutoGPT."""
 from typing import Any, Dict, List, Optional, Tuple, TypedDict, TypeVar
 from auto_gpt_plugin_template import AutoGPTPluginTemplate
 

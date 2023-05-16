@@ -1,4 +1,3 @@
-"""This module contains functions for interacting with the Twitter API."""
 from __future__ import annotations
 from . import AutoGPTPDFToText
 import fitz
