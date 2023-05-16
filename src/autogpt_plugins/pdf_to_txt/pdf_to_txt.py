@@ -26,4 +26,4 @@ def pdf2txt(pdf_file_path: str, txt_file_path: str) -> str:
         out.write(bytes((12,))) # write page delimiter (form feed 0x0C)
     out.close()
 
-    return f"Success! The PDF file was converted to TXT."
+    return "Success! The PDF file was converted to a text file."
