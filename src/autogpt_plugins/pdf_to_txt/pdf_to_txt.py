@@ -45,7 +45,7 @@ def pdf2txt(pdf_file_path: str, txt_file_path: str) -> str:
     doc = fitz.open(cwd + '/' + pdf_file_path) # open a document
     for page in doc: # iterate the document pages
         text = page.get_text().encode("utf8") # get plain text (is in UTF-8)
-        content.append(text)
+        content += text.decode("utf8")
 
     chunks = split_text_into_chunks(content, "cl100k_base", one_chunk)
 
