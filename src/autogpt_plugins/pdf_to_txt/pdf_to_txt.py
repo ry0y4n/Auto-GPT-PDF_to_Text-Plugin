@@ -29,11 +29,11 @@ def split_text_into_chunks(text: str, encoding_name: str, chunk_size: int) -> li
 
     return chunks
 
-def pdf2txt(pdf_file_path: str, txt_file_path: str) -> str:
+def pdf2txt(pdf_file_name: str, txt_file_name: str) -> str:
     """Convert a PDF file to a text file.
     Args:
-        pdf_filen_path (str): The PDF file path.
-        txt_filen_path (str): The TXT file path.
+        pdf_filen_name (str): The PDF file path.
+        txt_filen_name (str): The TXT file path.
     Returns:
         str: The tweet that was posted.
     """
@@ -42,17 +42,18 @@ def pdf2txt(pdf_file_path: str, txt_file_path: str) -> str:
     cwd = os.path.join(dirname, '../../../../../../autogpt/auto_gpt_workspace')
     cwd = os.path.normpath(cwd)
 
-    doc = fitz.open(cwd + '/' + pdf_file_path) # open a document
+    doc = fitz.open(cwd + '/' + pdf_file_name) # open a document
+    content = "" # Initialize the content variable
     for page in doc: # iterate the document pages
         text = page.get_text().encode("utf8") # get plain text (is in UTF-8)
         content += text.decode("utf8")
 
-    chunks = split_text_into_chunks(content, "cl100k_base", one_chunk)
+    chunks_text = split_text_into_chunks(content, "cl100k_base", one_chunk)
 
     # Save each chunk to a separate file
-    for i, chunk in enumerate(chunks):
+    for i, chunk in enumerate(chunks_text):
         # Construct the filename for each chunk
-        filename = os.path.join(cwd + '/', f'{i}{txt_file_path}') #directory and file name to save the text data
+        filename = os.path.join(cwd + '/'+txt_file_name, f'{i}{txt_file_name}') #directory and file name to save the text data
         with open(filename, 'w', encoding='utf-8') as file:
             encoding = tiktoken.get_encoding("cl100k_base")
             decoded_text = encoding.decode(chunk)
