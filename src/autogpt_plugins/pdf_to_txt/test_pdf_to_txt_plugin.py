@@ -1,4 +1,4 @@
-from .import (
+from .pdf_to_txt import (
     pdf2txt,
 )
 
