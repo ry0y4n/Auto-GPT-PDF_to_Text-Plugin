@@ -209,8 +209,8 @@ class AutoGPTPDFToText(AutoGPTPluginTemplate):
             "pdf_to_txt",
             "PDF to Text",
             {
-                "pdf_file_path": "<pdf_file_path>",
-                "txt_file_path": "<txt_file_path>"
+                "pdf_file_name": "<pdf_file_name>",
+                "txt_file_name": "<txt_file_name>"
             },
             pdf2txt
         )
