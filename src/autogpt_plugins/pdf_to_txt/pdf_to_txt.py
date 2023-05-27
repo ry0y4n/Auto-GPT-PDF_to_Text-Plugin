@@ -5,7 +5,7 @@ import os
 import tiktoken
 
 plugin = AutoGPTPDFToText()
-one_chunk = 4000 #amount of token in one chunk
+CHUNK_SIZE = 4000 #amount of token in one chunk
 
 
 def split_text_into_chunks(text: str, encoding_name: str, chunk_size: int) -> list:
@@ -48,7 +48,7 @@ def pdf2txt(pdf_file_name: str, txt_file_name: str) -> str:
         text = page.get_text().encode("utf8") # get plain text (is in UTF-8)
         content += text.decode("utf8")
 
-    chunks_text = split_text_into_chunks(content, "cl100k_base", one_chunk)
+    chunks_text = split_text_into_chunks(content, "cl100k_base", CHUNK_SIZE)
 
     # Save each chunk to a separate file
     # divide filename and extention
