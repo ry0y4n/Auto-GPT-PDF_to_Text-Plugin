@@ -21,3 +21,4 @@ atproto
 requests
 bs4
 PyMuPDF
+tiktoken
