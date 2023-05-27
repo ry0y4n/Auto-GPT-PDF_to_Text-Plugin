@@ -32,8 +32,8 @@ def split_text_into_chunks(text: str, encoding_name: str, chunk_size: int) -> li
 def pdf2txt(pdf_file_name: str, txt_file_name: str) -> str:
     """Convert a PDF file to a text file.
     Args:
-        pdf_filen_name (str): The PDF file path.
-        txt_filen_name (str): The TXT file path.
+        pdf_filen_name (str): The PDF file name.
+        txt_filen_name (str): The TXT file name.
     Returns:
         str: The tweet that was posted.
     """
